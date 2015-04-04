@@ -4,6 +4,8 @@ Xperience1080 is a Kodi v14.x skin with two texture sets, based on Xperience1080
 
 #### Features
 
+- [x] Added preview tv in list channel
+- [x] Added font sans serif to Support arabic text
 - [x] Smooth transitions between screens
 - [x] Completely flat textures, taking inspiration from Microsoft Metro
 - [x] Original textures from `Black included as the default - additions added where required.

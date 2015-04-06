@@ -50,7 +50,8 @@
                                 <posy>0</posy>
                                 <width>710</width>
                                 <height>400</height>
-                                <texture border="4">/storage/.kodi/addons/skin.xperience1080-0d7bb65/extras/backgrounds/tv.jpg</texture>
+                            <texture border="4">/storage/.kodi/addons/pakerou-skin.xperience1080-0d7bb65/extras/backgrounds/tv.jpg</texture>
+                            <backgroundcolor>0</backgroundcolor>
 
                             </control>
     <control type="label">

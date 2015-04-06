@@ -400,7 +400,7 @@
                                     <description>Label</description>
                                     <posx>120</posx>
                                     <posy>0</posy>
-                                    <width>300</width>
+                                    <width>765</width>
                                     <height>96</height>
                                     <font>Font-Condensed-S34-B</font>
                                     <align>left</align>
@@ -415,7 +415,7 @@
                                         <description>Label</description>
                                         <posx>120</posx>
                                         <posy>0</posy>
-                                        <width>300</width>
+                                        <width>765</width>
                                         <height>58</height>
                                         <font>Font-Condensed-S34-B</font>
                                         <align>left</align>

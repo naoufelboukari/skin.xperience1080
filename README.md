@@ -7,6 +7,6 @@ I have just make some changes :
 
 - [x] Added preview tv in list channel
 - [x] Added font sans serif to Support arabic text
-
+- [x] Added logo name channel video with play stop ....
 
 

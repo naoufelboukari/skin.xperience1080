@@ -9,35 +9,36 @@
         <control type="group">
             <visible>!Window.IsVisible(sliderdialog)</visible>
             <animation type="WindowOpen" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">
-                <effect type="fade" start="0" end="100" time="175" tween="sine" easing="inout" delay="100" />
-                <effect type="slide" start="0,70" end="0,0" time="275" tween="cubic" easing="inout" />
+                <effect type="fade" start="0" end="100" time="175" tween="sine" easing="inout" delay="100"/>
+                <effect type="slide" start="0,70" end="0,0" time="275" tween="cubic" easing="inout"/>
             </animation>
             <animation type="WindowOpen" condition="![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">
-                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
-                <effect type="slide" start="0,85" end="0,0" time="300" tween="cubic" easing="out" />
+                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout"/>
+                <effect type="slide" start="0,85" end="0,0" time="300" tween="cubic" easing="out"/>
             </animation>
             <animation type="WindowClose" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,70" time="300" tween="cubic" easing="inout" />
+                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out"/>
+                <effect type="slide" start="0,0" end="0,70" time="300" tween="cubic" easing="inout"/>
             </animation>
             <animation type="WindowClose" condition="![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="in" />
-                <effect type="slide" start="0,0" end="0,85" time="300" tween="sine" easing="in" />
+                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="in"/>
+                <effect type="slide" start="0,0" end="0,85" time="300" tween="sine" easing="in"/>
             </animation>
             <animation type="Visible">
-                <effect type="fade" start="0" end="100" time="175" tween="sine" easing="inout" delay="100" />
-                <effect type="slide" start="0,70" end="0,0" time="275" tween="cubic" easing="inout" />
+                <effect type="fade" start="0" end="150" time="175" tween="sine" easing="inout" delay="100"/>
+                <effect type="slide" start="0,70" end="0,0" time="275" tween="cubic" easing="inout"/>
             </animation>
             <animation type="Hidden">
-                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,70" time="300" tween="cubic" easing="inout" />
+                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out"/>
+                <effect type="slide" start="0,0" end="0,70" time="300" tween="cubic" easing="inout"/>
             </animation>
             <animation effect="slide" start="0,0" end="0,-62" time="300" tween="cubic" easing="inout" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">Conditional</animation>
             
+            
             <control type="group">
-                
-	<posx>0</posx>
-	<posy>-300</posy>
+                <!--full screen logo -->
+                <posx>0</posx>
+                <posy>-300</posy>
                 <control type="image">
                     <posx>0</posx>
                     <posy>700</posy>
@@ -46,64 +47,63 @@
                     <texture border="1,401,1,45">osd/fullscreen/osd-back-info.png</texture>
                 </control>
                 <control type="group">
-                        <posx>358</posx>
-                        <posy>1248</posy>
-                        <control type="progress">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1204</width>
-                            <height>25</height>
-                            <info>Player.CacheLevel</info>
-                            <texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
-                            <midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
-                            <lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
-                            <righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
-                            <overlaytexture>-</overlaytexture>
-                        </control>
-                        <control type="progress">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1204</width>
-                            <height>25</height>
-                            <info>Player.ProgressCache</info>
-                            <reveal>true</reveal>
-                            <texturebg>osd/fullscreen/progress/back.png</texturebg>
-                            <midtexture>osd/fullscreen/progress/mid.png</midtexture>
-                            <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-                            <righttexture>osd/fullscreen/progress/right.png</righttexture>
-                            <colordiffuse>44FFFFFF</colordiffuse>
-                            <overlaytexture>-</overlaytexture>
-                        </control>
-                        <control type="progress" id="23">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1204</width>
-                            <height>25</height>
-                            <info>Player.Progress</info>
-                            <reveal>true</reveal>
-                            <texturebg>osd/fullscreen/progress/back.png</texturebg>
-                            <midtexture>osd/fullscreen/progress/mid.png</midtexture>
-                            <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-                            <righttexture>osd/fullscreen/progress/right.png</righttexture>
-                            <overlaytexture>-</overlaytexture>
-                        </control>
-                        <control type="progress" id="401">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>1204</width>
-                            <height>25</height>
-                            <reveal>true</reveal>
-                            <texturebg>osd/fullscreen/progress/back.png</texturebg>
-                            <midtexture>osd/fullscreen/progress/mid.png</midtexture>
-                            <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-                            <righttexture>osd/fullscreen/progress/right.png</righttexture>
-                            <overlaytexture>-</overlaytexture>
-                            <colordiffuse>AAFFFFFF</colordiffuse>
-                            <visible>Player.Seeking</visible>
-                        </control>
+                    <posx>358</posx>
+                    <posy>1248</posy>
+                    <control type="progress">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1204</width>
+                        <height>25</height>
+                        <info>Player.CacheLevel</info>
+                        <texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+                        <midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
+                        <lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+                        <righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+                        <overlaytexture>-</overlaytexture>
                     </control>
+                    <control type="progress">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1204</width>
+                        <height>25</height>
+                        <info>Player.ProgressCache</info>
+                        <reveal>true</reveal>
+                        <texturebg>osd/fullscreen/progress/back.png</texturebg>
+                        <midtexture>osd/fullscreen/progress/mid.png</midtexture>
+                        <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+                        <righttexture>osd/fullscreen/progress/right.png</righttexture>
+                        <colordiffuse>44FFFFFF</colordiffuse>
+                        <overlaytexture>-</overlaytexture>
+                    </control>
+                    <control type="progress" id="23">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1204</width>
+                        <height>25</height>
+                        <info>Player.Progress</info>
+                        <reveal>true</reveal>
+                        <texturebg>osd/fullscreen/progress/back.png</texturebg>
+                        <midtexture>osd/fullscreen/progress/mid.png</midtexture>
+                        <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+                        <righttexture>osd/fullscreen/progress/right.png</righttexture>
+                        <overlaytexture>-</overlaytexture>
+                    </control>
+                    <control type="progress" id="401">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1204</width>
+                        <height>25</height>
+                        <reveal>true</reveal>
+                        <texturebg>osd/fullscreen/progress/back.png</texturebg>
+                        <midtexture>osd/fullscreen/progress/mid.png</midtexture>
+                        <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+                        <righttexture>osd/fullscreen/progress/right.png</righttexture>
+                        <overlaytexture>-</overlaytexture>
+                        <colordiffuse>AAFFFFFF</colordiffuse>
+                        <visible>Player.Seeking</visible>
+                    </control>
+                </control>
                 <control type="group">
-                 
                     <control type="group">
                         <posy>217</posy>
                         <control type="group">
@@ -265,7 +265,7 @@
                                     <enable>false</enable>
                                     <visible>IsEmpty(VideoPlayer.Year) | IsEmpty(VideoPlayer.Genre)</visible>
                                 </control>
-                                                            </control>
+                            </control>
                         </control>
                         <control type="group">
                             <posy>825</posy>
@@ -309,7 +309,6 @@
                                     <aligny>center</aligny>
                                     <enable>false</enable>
                                 </control>
-                              
                             </control>
                         </control>
                         <control type="group">
@@ -351,7 +350,6 @@
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
-                               
                             </control>
                         </control>
                         <control type="group">
@@ -362,20 +360,11 @@
                                 <posy>-35</posy>
                                 <width>276</width>
                                 <height>394</height>
-								<bordersize>20</bordersize>
+                                <bordersize>20</bordersize>
                                 <bordertexture border="30">osd/fullscreen/cover-shadow.png</bordertexture>
                                 <texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[VideoPlayer.Cover]</texture>
                                 <aspectratio align="right">keep</aspectratio>
                             </control>
-							
-							
-							
-							      
-								
-								
-								
-								
-								
                             <control type="label">
                                 <posx>360</posx>
                                 <posy>83</posy>
@@ -431,53 +420,52 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <autoscroll delay="11500" time="5000" repeat="7500">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
-									<visible>Skin.HasSetting(OSD.HideFileStreamPath)</visible>
+                                    <visible>Skin.HasSetting(OSD.HideFileStreamPath)</visible>
                                 </control>
-								<control type="textbox">
-+                                    <posx>360</posx>
-+                                    <posy>192</posy>
-+                                    <width>1460</width>
-+                                    <height>90</height>
-+                                    <label>$INFO[VideoPlayer.Plot]</label>
-+                                    <textcolor>aawhite</textcolor>
-+                                    <font>Font-Condensed-S32</font>
-+                                    <align>justify</align>
-+                                    <visible>!IsEmpty(VideoPlayer.Plot) + Skin.HasSetting(OSD.HideFileStreamPath)</visible>
-+                                    <autoscroll delay="11500" time="5000" repeat="7500">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
-                                 </control>
-								<control type="textbox">
-+                                    <posx>360</posx>
-+                                    <posy>192</posy>
-+                                    <width>1460</width>
-+                                    <height>135</height>
-+                                    <label>$INFO[VideoPlayer.Plot]</label>
-+                                    <textcolor>aawhite</textcolor>
-+                                    <font>Font-Condensed-S32</font>
-+                                    <align>justify</align>
-+                                    <visible>!IsEmpty(VideoPlayer.Plot) + !Skin.HasSetting(OSD.HideFileStreamPath)</visible>
-+                                    <autoscroll delay="11500" time="5000" repeat="7500">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
-                                 </control>								 
+                                <control type="textbox">
+                                    +                                    <posx>360</posx>
+                                    +                                    <posy>192</posy>
+                                    +                                    <width>1460</width>
+                                    +                                    <height>90</height>
+                                    +                                    <label>$INFO[VideoPlayer.Plot]</label>
+                                    +                                    <textcolor>aawhite</textcolor>
+                                    +                                    <font>Font-Condensed-S32</font>
+                                    +                                    <align>justify</align>
+                                    +                                    <visible>!IsEmpty(VideoPlayer.Plot) + Skin.HasSetting(OSD.HideFileStreamPath)</visible>
+                                    +                                    <autoscroll delay="11500" time="5000" repeat="7500">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+                                </control>
+                                <control type="textbox">
+                                    +                                    <posx>360</posx>
+                                    +                                    <posy>192</posy>
+                                    +                                    <width>1460</width>
+                                    +                                    <height>135</height>
+                                    +                                    <label>$INFO[VideoPlayer.Plot]</label>
+                                    +                                    <textcolor>aawhite</textcolor>
+                                    +                                    <font>Font-Condensed-S32</font>
+                                    +                                    <align>justify</align>
+                                    +                                    <visible>!IsEmpty(VideoPlayer.Plot) + !Skin.HasSetting(OSD.HideFileStreamPath)</visible>
+                                    +                                    <autoscroll delay="11500" time="5000" repeat="7500">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+                                </control>
                             </control>
                         </control>
                     </control>
                 </control>
             </control>
-            <control type="group">
+           <control type="group">
                 <!-- control buttons -->
                 <posx>0</posx>
                 <posy>989</posy>
-               
-				<control type="label">				
-					<description>Mini Progress Time</description>
-					<posx>1590</posx>
-					<posy>38</posy>
-					<width>360</width>
-					<height>25</height>
-					<label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
-					<textcolor>aawhite</textcolor>
-					<font>Font-Condensed-S34</font>
-					<align>left</align>
-					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="out" delay="100" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">Conditional</animation> 
+                <control type="label">
+                    <description>Mini Progress Time</description>
+                    <posx>1590</posx>
+                    <posy>38</posy>
+                    <width>360</width>
+                    <height>25</height>
+                    <label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+                    <textcolor>aawhite</textcolor>
+                    <font>Font-Condensed-S34</font>
+                    <align>left</align>
+                    <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="out" delay="100" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">Conditional</animation>
                 </control>
                 <control type="button" id="11">
                     <description>Audio Settings</description>
@@ -522,23 +510,23 @@
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                 </control>
                 <control type="togglebutton" id="7">
-    				<posx>535</posx>
-    				<height>100</height>
-    				<width>100</width>
-    				<texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
-    				<texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
-    				<alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
-    				<alttexturenofocus>osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
-    				<usealttexture>Player.Recording</usealttexture>
-    				<onleft>12</onleft>
-    				<onright>1</onright>
-    				<onup>Close</onup>
-    				<ondown>Close</ondown>
-    				<onclick>PlayerControl(Record)</onclick>
-    				<enable>Player.CanRecord</enable>
-    				<animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
-    				<visible>VideoPlayer.Content(LiveTV)</visible>
-    			</control>
+                    <posx>535</posx>
+                    <height>100</height>
+                    <width>100</width>
+                    <texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
+                    <texturenofocus>osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
+                    <alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
+                    <alttexturenofocus>osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
+                    <usealttexture>Player.Recording</usealttexture>
+                    <onleft>12</onleft>
+                    <onright>1</onright>
+                    <onup>Close</onup>
+                    <ondown>Close</ondown>
+                    <onclick>PlayerControl(Record)</onclick>
+                    <enable>Player.CanRecord</enable>
+                    <animation effect="fade" start="100" end="50" time="150" tween="sine" easing="inout" condition="!Player.CanRecord">Conditional</animation>
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                </control>
                 <control type="button" id="1">
                     <description>Skip Back</description>
                     <posx>690</posx>
@@ -668,22 +656,22 @@
                 </control>
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <!-- DO NOT USE -->
-			<!-- <control type="button" id="14">
-                        <description>3D Dialog Trigger</description>
-                        <posx>1248</posx>
-                        <height>100</height>
-                        <width>100</width>
-                        <texturefocus>osd/fullscreen/buttons/3d-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/3d-nofo.png</texturenofocus>
-                        <onclick>StereoMode</onclick>
-                        <enable>VideoPlayer.IsStereoscopic</enable>
-                        <onleft>6</onleft>
-                        <onright>10</onright>
-                        <onup>Close</onup>
-                        <ondown>Close</ondown>
-						<animation effect="fade" start="100" end="50" time="10" tween="sine" easing="inout" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
-                    </control>	-->					
+                    <!-- DO NOT USE -->
+                    <!-- <control type="button" id="14">
+                         <description>3D Dialog Trigger</description>
+                         <posx>1248</posx>
+                         <height>100</height>
+                         <width>100</width>
+                         <texturefocus>osd/fullscreen/buttons/3d-fo.png</texturefocus>
+                         <texturenofocus>osd/fullscreen/buttons/3d-nofo.png</texturenofocus>
+                         <onclick>StereoMode</onclick>
+                         <enable>VideoPlayer.IsStereoscopic</enable>
+                         <onleft>6</onleft>
+                         <onright>10</onright>
+                         <onup>Close</onup>
+                         <ondown>Close</ondown>
+                         <animation effect="fade" start="100" end="50" time="10" tween="sine" easing="inout" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
+                    </control>	-->
                     <control type="button" id="10">
                         <description>DVD Menu</description>
                         <posx>1285</posx>
@@ -705,7 +693,7 @@
                         <height>100</height>
                         <width>100</width>
                         <texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
-                        <texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>					
+                        <texturenofocus>osd/fullscreen/buttons/info-nofo.png</texturenofocus>
                         <onclick>Action(Info)</onclick>
                         <onclick>PreviousMenu</onclick>
                         <onleft>10</onleft>
@@ -770,9 +758,8 @@
                         <onleft>8</onleft>
                         <onright>11</onright>
                     </control>
-
                 </control>
-            </control>
+            </control> 
         </control>
     </controls>
 </window>
